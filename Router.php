@@ -17,7 +17,7 @@ class Router
     /** @var null|array $params - массив с get-параметрами который мы получили от пользователя */
     protected null|array $params;
 
-    /** @var object $controller - созданый объект контроллера */
+    /** @var object $controller - созданный объект контроллера */
     protected object $controller;
 
     /** @var array|null $postParams - Post параметры */
@@ -25,7 +25,7 @@ class Router
 
 
     /**
-     * Заполняет свойства $controllerName, $action и $params массив (если есть get-парметры)
+     * Заполняет свойства $controllerName, $action и $params массив (если есть get-параметры)
      */
     public function __construct(array $request)
     {
@@ -53,7 +53,6 @@ class Router
         try {
             $this->controller = new ($this->controllerName);
         } catch (Throwable $error) {
-
             $this->controller = new ErrorController();
             $this->action = 'actionError';
         }
@@ -61,7 +60,7 @@ class Router
     }
 
     /**
-     * Функция возвращает экшн указанный в URI вызываемого контроллера, если в вызываемом контроллере данного экшона нет, вернет 'actionEmpty'
+     * Функция возвращает экшн указанный в URI вызываемого контроллера, если в вызываемом контроллере данного экшн нет, вернет 'actionEmpty'
      * @return string - возвращает имя запрашиваемого экшна
      */
     public function getAction(): string

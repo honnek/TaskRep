@@ -22,38 +22,9 @@ $isAdmin = ($this->getData()['isAdmin']);
     <link rel="stylesheet" href="http://localhost/project/src/css/bootstrap.min.css">
     <link rel="stylesheet" href="http://localhost/project/src/css/main.css">
     <title>Главная</title>
-    <style>
-        TABLE {
-            width: 1500px;
-            border: 2px solid black;
-            background: silver;
-        }
 
-        TD, TH {
-            text-align: center;
-            padding: 3px;
-        }
-
-        TH {
-            background: #4682b4;
-            color: white;
-            border-bottom: 2px solid black;
-        }
-
-        .lc {
-            font-weight: bold;
-            text-align: left;
-        }
-    </style>
 </head>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
 <body>
 
 <?php if ($isAdmin) { ?>

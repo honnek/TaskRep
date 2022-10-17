@@ -7,23 +7,13 @@ spl_autoload('Model/UserRepository');
  */
 class MainController
 {
-    /** @var TaskRepository $taskRepository */
-    protected TaskRepository $taskRepository;
 
-    /** @var ViewController $viewController */
-    protected ViewController $viewController;
-
-    /** @var UserRepository $userRepository */
-    protected UserRepository $userRepository;
 
     /**
      * Инициализируем поля
      */
     public function __construct()
     {
-        $this->taskRepository = new TaskRepository();
-        $this->viewController = new ViewController();
-        $this->userRepository = new UserRepository();
     }
 
     /**
